@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+.property1{
+  background-image: url("../images/property.jpg");
+  background-attachment: fixed;
+  background-size:cover;
+  margin: 0;
+}
+
+/* Create two equal columns that floats next to each other */
+.columndivide1{
+    float: left;
+    width: 70%;
+    padding: 5px;
+}
+
+.columndivide2{
+  float: right;
+  width: 20%;
+  margin-right: 5px;
+  margin-top: 85px;
+  padding: 5px;
+}
+  
+/* Clear floats after the columns */
+.rowdivide:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.columndivide1 {
+  width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .columndivide2 {
+    width: 100%;
+  }
+}
+
+/* images collection */
+.container {
+  position: relative;
+  padding: 80px; 
+}
+  
+.holder::-webkit-scrollbar {
+  display: none;
+}
+  
+/* Hide the images by default */
+.slides {
+  display: none;
+}
+ 
+.slides img {
+  width: 100%;
+}
+  
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width: 600px) {
+  .prevContainer,
+  .nextContainer {
+  display: none;
+  visibility: hidden;
+  }
+}
+  
+.prevContainer,
+.nextContainer {
+  background-color:none;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, calc(-50% - 54px));
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+  
+.prevContainer {
+  margin-left: 26px;
+  left: 0;
+  border-radius: 30px 0 0 30px;
+}
+  
+.prev {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 25px;
+  width: 23px;
+  float: left;
+  margin-left: 12px
+}
+  
+.prev svg,
+.next svg {
+  fill: white;
+}
+  
+.nextContainer {
+  margin-right: 26px;
+  right: 0;
+  border-radius: 0 30px 30px 0;
+}
+  
+.next {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 34px;
+  width: 32px;
+  float: right;
+  margin-right: 12px;
+}
+  
+/* Container for image text */
+.caption-container {
+  text-align: left;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+  
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+  
+/* Add a transparency effect for thumbnail images */
+.slide-thumbnail {
+  width: 100%;
+  opacity: 0.6;
+  cursor: pointer;
+}
+  
+.active,
+.slide-thumbnail:hover {
+  opacity: 1;
+}
+
+/* ----- list style for the property details ----- */
+ul.list-1 {
+	list-style-type: none;
+	padding: 10px;
+  margin: 0;
+  opacity: 0.7;
+	background-color: #52aeca;
+}
+
+ul.list-1 li {
+	padding: 5px;
+	background-color: #e2ece6;
+	color:black;
+  font-size: 20px;
+  font-family: 'Assistant', sans-serif;
+  font-weight: bold;
+	border-bottom: 2px solid #f3b919;
+}
+
+ul.list-1 li:last-child {border-bottom: none; }
+
+/* add & delete button */
+button {
+	width: 35%;
+	padding: 12px;
+	font-size: 18px;
+	background: #15C39A;
+	color: #fff;
+	border: none;
+	border-radius: 100px;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 15px;
+	transition: background 0.2s ease-out;
+}
+  
+button:hover {
+	background: #55D3AC;
+}
+  
+/* property name label */
+.label {
+	overflow: hidden;
+	padding: 10px 0;
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+  font-size: 40px;
+  color: whitesmoke;
+	
+> span {
+	display: inline-block;
+  padding: 5px 20px;
+	color: #444;
+	position: relative;
+  
+&:before,
+&:after {
+content: '';
+	position: absolute;
+	background: #ccc;
+	height: 1px;
+	width: 9999px;
+	top: 50%;
+	display: block;
+}
+		
+&:before {
+	left: 0;
+	transform: translatex(-100%);
+}
+		
+&:after {
+	right: 0;
+	transform: translatex(100%);
+}
+		
+}
+}
+
+/* favourite list box */
+.fav-box{
+  font-size: 20px;
+  font-family: 'Assistant', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+

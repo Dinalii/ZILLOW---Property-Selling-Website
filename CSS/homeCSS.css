@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+.home {
+	background-image: url("../images/home.jpg");
+	background-attachment: fixed;
+	background-size:cover;
+	margin: 0;
+}
+
+/* split screen */
+.left, .right {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin-top: 200px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.left {
+  left: 0;
+  text-align: center;
+}
+
+.right {
+  right: 0;
+  margin-right: 15px;
+}
+
+/* animated text */
+.waviy {
+  position: relative;
+}
+
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 60px;
+  font-family: 'Black Ops One', cursive;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 5s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+
+h3{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* button */
+button {
+	width: 40%;
+	padding: 12px;
+	font-size: 18px;
+	background: #77669c;
+	color: #fff;
+	border: none;
+	border-radius: 100px;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 15px;
+	transition: background 0.2s ease-out;
+}
+  
+button:hover {
+  background: #8070dd;
+}
+  

@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ZILLOW | Find a property</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- IMPORTING STYLESHEETS CSS & JQUERY -->
+  <link rel="stylesheet" href="./CSS/externalCSS.css"> 
+  <link rel="stylesheet" href="./CSS/searchCSS.css">
+  <link href="./CSS/jquery-ui.css" rel="stylesheet">
+  <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="./JQuery/search.js"></script>
+  <script src="./JQuery/jquery-ui.js"></script>
+  
+
+
+ <!--NAVIGATION BAR -->
+ <nav class="navbar"> 
+    <img src="https://svgshare.com/i/Q22.svg" class="navbarLogo" alt=""/>
+    <ul class="navbarLinks"> 
+      <li><a href="./index.html" class="active">Home</a></li>
+      <li><a href="FindAProperty.html">Search</a></li>     
+    </ul> 
+       <section class="navbarHam"></section>
+</nav>
+</head>
+
+ <!-- BODY SECTION -->
+ <body class="home">
+    
+    <br><br>
+
+    <h1>Find A Property</h1>
+
+    <!-- SEARCH FORM -->
+    <form>
+
+    <!-- NUMBER OF BEDRROMS SPINNER     -->
+    <div class="row">
+        <div class="inline">
+            <h3>Min Bedrooms :</h3>
+              <input id="spinner" value="3">
+              
+              <h3>Max Bedrooms :</h3>
+              <input id="spinner2" value="3">
+        </div>
+    </div>
+
+    <!-- PROPERTY TYPE -->
+    <div class="row">
+        <h3>Property type : </h3>
+    <select name="property" id="property">
+        <option value="Flats">Flat</option>
+        <option value="Houses">House</option>
+        <option value="Any" selected>Any</option>
+    </select>
+    </div>
+   
+    <!-- TIME ADDED -->
+    <div class="row">
+    <div class="Time">
+        <h3>Time Added :</h3>
+        <select name="time" id="time">
+        <option VALUE="January" ,"Feburary" ,"March"> January - March (2020)</option>
+        <option VALUE="April" ,"May", "June"> April - June (2020)</option>
+        <option value="July", "August","September">July - September (2020)</option>
+        <option value= "October", "November", "December">October - December (2020)</option>
+        <option value="Anytime" selected>Anytime</option>
+        </select>
+        <!-- <input type="text" id="time"> -->
+    </div> 
+    </div>
+
+    <!-- PRICE RANGE -->
+   <div class="row">
+    <p class="box">  
+        <h3>Price Range :</h3>
+        <input type="text" id="amount" readonly class="goldSliderText">
+        </p>
+        <div id="slider-range"></div>
+   </div>
+
+</form>
+
+<!-- SEARCH BUTTON -->
+<button id="Search">Search</button> <br><br>
+
+<!-- SEARCH RESULTS PLACEHOLDER -->
+<div id="Placeholder"></div>
+
+<!-- VIEW FAVOURITES BUTTON -->
+<button class="viewFavourites">View Favourites</button><br><br>
+
+<!-- CLEAR FAVOURITES BUTTON -->
+<button class="clearFavourites">Clear All</button>
+<br><br>
+
+<!-- FAVOURITES LIST PLACEHOLDER -->
+<div id="Placeholder2"></div>
+<br><br>
+
+
+<!-- INTERNAL JSON FILE -->
+<script>
+
+var data = { 
+    // £
+	"properties": [
+    {
+        "id":"prop1",
+			"type":"Houses",
+            "bedrooms":3,
+			"price":650000,
+			"tenure":"Freehold",
+			"description":"Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
+			"location":"Petts Wood Road, Petts Wood, Orpington",
+			"picture":"images/prop1pic1small.jpg",
+			"url":"properties/Property1.html",
+            "added": {
+                "month":"January",
+                "day":12,
+                "year":2020
+            }
+        },
+		{
+            "id":"prop2",
+			"type":"Flats",
+            "bedrooms":2,
+			"price":299995,
+			"tenure":"Freehold",
+			"description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
+			"location":"Crofton Road Orpington BR6",
+			"picture":"images/prop2pic1small.jpg",
+			"url":"properties/Property2.html",
+            "added": {
+                "month":"July",
+                "day":14,
+                "year":2020
+            }
+        },
+		{
+            "id":"prop3",
+			"type":"Flats",
+            "bedrooms":5,
+			"price":466100,
+			"tenure":"Freehold",
+			"description":"This grand and magnificent flat, boasting regal reception rooms and magnificent gardens, has 2 spacious master suites and 6 well- proportioned bedrooms, with staff quarters in the basement. The house has the advantage of a lift and ample off street parking and garaging. Behind is a substantial, 5 bedroom mews house on Cresswell Place with planning permission to extend to 3,000 sq ft, leading to close to 13,000 sq ft for the ensemble before any alterations such as linking both houses....",
+			"location":"High Road, Ilford, IG1",
+			"picture":"images/prop3pic1small.jpg",
+			"url":"properties/Property3.html",
+            "added": {
+                "month":"October",
+                "day":24,
+                "year":2020
+            }
+        },
+		{
+            "id":"prop4",
+			"type":"Houses",
+            "bedrooms":7,
+			"price":557000,
+			"tenure":"Freehold",
+			"description":"An exceptional early Victorian house that boasts the space so many strive to achieve in this exclusive location. Located on the southern side of this highly regarded residential street, in the heart of The Boltons Conservation Area. Benefiting from a front and rear garden which connects to the mews house with off street parking for 5 cars, allowing for fantastic security and privacy.....",
+			"location":"Prince Regent Street, Newham, E16",
+			"picture":"images/prop4pic1small.jpg",
+			"url":"properties/Property4.html",
+            "added": {
+                "month":"April",
+                "day":19,
+                "year":2020
+            }
+        },
+		{
+            "id":"prop5",
+			"type":"Flats",
+            "bedrooms":11,
+			"price":600100,
+			"tenure":"Freehold",
+			"description":"A stunning 5925 sq ft duplex apartment located within an exclusive and private gated development with concierge service, and underground parking. Arranged over two floors with a grand double height reception room, the property benefits from a beautiful eat in kitchen complete with Gaggenau appliances, second reception room, five bedrooms with en suite bathrooms, massage room, gym and private terrace and a further study and housekeepers quarters with own entrance. The property has state of the art lighting and entertainment system controlled by touch screen pads throughout the property. The development offers a swimming pool and manicured communal gardens......",
+			"location":"Green Lane, Seven Kings, IG6",
+			"picture":"images/prop5pic1small.jpg",
+			"url":"properties/Property5.html",
+            "added": {
+                "month":"July",
+                "day":10,
+                "year":2020
+            }
+        },
+		{
+            "id":"prop6",
+			"type":"Houses",
+            "bedrooms":6,
+			"price":300400,
+			"tenure":"Freehold",
+			"description":"True elegance awaits you in this recently built exclusive waterfront development with this delightful 2 double bedroom ground floor apartment with private extensive terracing whilst affording some of the finest views available spanning Poole Harbour and Brownsea Island.",
+			"location":"The Landing, 336-338 Sandbanks Road, Evening Hill, Poole, BH14",
+			"picture":"images/prop6pic1small.jpg",
+			"url":"properties/Property6.html",
+            "added": {
+                "month":"July",
+                "day":17,
+                "year":2020
+            }
+        },
+        {
+            "id":"prop7",
+			"type":"Houses",
+            "bedrooms":9,
+			"price":299550,
+			"tenure":"Freehold",
+			"description":"A three double bedroom detached home arranged over three floors that will enjoy modern accommodation well suited to both upsizing couples and families alike. The property is being constructed with modern living in mind and will feature underfloor heating throughout the entire ground floor, contemporary bathrooms and a bespoke kitchen with a range of integrated appliances.",
+			"location":"Bath Hill, Keynsham, Bristol",
+			"picture":"images/prop7pic1small.jpg",
+			"url":"properties/Property7.html",
+            "added": {
+                "month":"April",
+                "day":6,
+                "year":2020
+            }
+        }
+        
+]}
+
+</script>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <a target="_blank" rel="noopener noreferrer" href='https://tomasz-gajda.netlify.app/' ></a>           
+    <img class="logo" src='https://svgshare.com/i/Q22.svg' alt="" />         
+    <article class="footerRights">
+      <b>Written and coded by Dinali<a href="#"></a> &copy; 2020 All Rights Reserved</b> 
+    </article>
+  </footer>
+
+</body>
+</html>

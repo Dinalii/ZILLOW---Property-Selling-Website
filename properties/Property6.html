@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ZILLOW | Property 6</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- IMPORTING STYLESHEETS CSS & JQUERY -->
+  <link rel="stylesheet" href="../CSS/externalCSS.css">
+  <link rel="stylesheet" href="../CSS/propertyExternalCSS.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="../JQuery/search.js"></script>
+  <script src="../JQuery/jquery-ui.js"></script>
+  <script src="../JQuery/propertyJS.js"></script>
+  <link href="../CSS/jquery-ui.css" rel="stylesheet">
+  <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+
+
+  <!--NAVIGATION BAR -->
+  <nav class="navbar"> 
+    <img src="https://svgshare.com/i/Q22.svg" class="navbarLogo" alt=""/>
+    <ul class="navbarLinks"> 
+      <li><a href="../index.html" class="active">Home</a></li>
+      <li><a href="../FindAProperty.html">Search</a></li>     
+    </ul> 
+       <section class="navbarHam"></section>
+  </nav>
+</head>
+
+<!-- BODY SECTION -->
+<body class="property1">
+</br></br>
+
+  <!-- PROPERTY NAME -->
+  <div class="label">
+    <span>6 Bedrooms Freehold House</span>
+  </div>
+
+<!-- SPLIT SCREEN -->
+<div>
+<div class="rowdivide">
+    <div class="columndivide1" >
+  
+<div class="container">
+    <!-- MAIN IMAGES -->
+    <div class="holder">
+      <div class="slides">
+        <img src="../images/prop6pic1.jpg" alt="" />
+      </div>
+  
+      <div class="slides">
+        <img src="../images/prop6pic2.jpg">
+      </div>
+  
+      <div class="slides">
+        <img src="../images/prop6pic3.jpg">
+      </div>
+        
+      <div class="slides">
+        <img src="../images/prop6pic4.jpg">
+      </div>
+  
+      <div class="slides">
+        <img src="../images/prop6pic5.jpg">
+      </div>
+        
+      <div class="slides">
+        <img src="../images/prop6pic6.png">
+      </div>
+    </div>
+  
+    <!-- ARROWS TO MOVE TO PREVIOUS AND NEXT IMAGE -->
+    <div class="prevContainer"><a class="prev" onclick="plusSlides(-1)">
+      <svg viewBox="0 0 24 24">
+      <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+      </svg>
+    </a></div>
+    <div class="nextContainer"><a class="next" onclick="plusSlides(1)">
+      <svg viewBox="0 0 24 24">
+      <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+      </svg>
+    </a></div>
+  
+    <!-- THUMBNAILS IN A ROW-->
+    <div class="row">
+      <div class="column">
+        <img class="slide-thumbnail" src="../images/prop6pic1.jpg" onclick="currentSlide(1)" alt="">
+      </div>
+      <div class="column">
+        <img class="slide-thumbnail" src="../images/prop6pic2.jpg" onclick="currentSlide(2)" alt="">
+      </div>
+      <div class="column">
+        <img class="slide-thumbnail" src="../images/prop6pic3.jpg" onclick="currentSlide(3)" alt="">
+      </div>
+      <div class="column">
+        <img class="slide-thumbnail" src="../images/prop6pic4.jpg" onclick="currentSlide(4)" alt="">
+      </div>
+      <div class="column">
+        <img class="slide-thumbnail" src="../images/prop6pic5.jpg" onclick="currentSlide(5)" alt="">
+      </div>    
+      <div class="column">
+        <img class="slide-thumbnail" src="../images/prop6pic6.png" onclick="currentSlide(6)" alt="">
+      </div>
+    </div>
+  </div>
+
+
+<!-- PRICE,LOCATION & TYPE OF THE VIEWED PROPERTY -->
+<ul class="list-1">
+	<li>Price : £300400</li>   
+	<li>Location : The Landing, 336-338 Sandbanks Road, Evening Hill, Poole, BH14</li>
+	<li>Type : House</li>
+</ul> 
+
+<!-- J QUERY UI TABPANE FOR VIEW DESCRIPTION, FLOOR PLAN & GOOGLE MAP -->
+</br></br>
+<div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">Description</a></li>
+      <li><a href="#tabs-2">Floor Plan</a></li>
+      <li><a href="#tabs-3">Google Map</a></li>
+    </ul>
+    <div id="tabs-1">
+      <p>True elegance awaits you in this recently built exclusive waterfront development with this delightful 3 double bedroom ground floor apartment with private extensive terracing whilst affording some of the finest views available spanning Poole Harbour and Brownsea Island.
+
+        Set behind secure solid electric gates, the drive enters into an upper area which gives access to visitors parking with a further drive down to the individual parking zone with 1 parking space assigned to the apartment.........</p>
+    </div>
+    <div id="tabs-2">
+      <p><img src="../images/prop6pic6.png"></p>
+    </div>
+    <div id="tabs-3">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10107.370716657335!2d-1.9442529!3d50.7043039!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x87cc0b3eca1c46c7!2sThe%20Landing!5e0!3m2!1sen!2slk!4v1609829352582!5m2!1sen!2slk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+  </div>
+</br></br>
+
+<p id="prop6">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <!-- ADD THE PROPERTY TO FAVOURITE LIST -->
+  <button class="addFavourites">Add To Favourites</button>
+  <!-- DELETE THE PROPERTY FROM FAVOURITE LIST -->
+  <button class="removeFavourites">Remove from Favourites</button>
+</p>
+
+</br></br>
+</br></br>
+</div>
+
+<div class="columndivide2" style="background-color:#aaa;" >
+  <!-- FAVOURITE LIST -->
+  <div class="fav-box">My Favourites</div>
+  <div id="Placeholder2"></div>
+</div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <a target="_blank" rel="noopener noreferrer" href='https://tomasz-gajda.netlify.app/' ></a>           
+    <img class="logo" src='https://svgshare.com/i/Q22.svg' alt="" />           
+    <article class="footerRights">
+    <b>Written and coded by Dinali<a href="#"></a> &copy; 2020 All Rights Reserved</b> 
+    </article>
+</footer>
+
+</body>
+</html>
