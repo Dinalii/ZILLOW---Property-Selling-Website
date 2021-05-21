@@ -49,3 +49,11 @@ Repository - jQuery-MultiSelect by nobleclem
 ### 4. SASS compiling for CSS3
 ### 5. HTML5
 ### 7. JavaScript
+
+---
+### Index Page View
+![Index Page](indexPage.png)
+
+---
+### Search Page
+![Search Page](searchPage.png)
