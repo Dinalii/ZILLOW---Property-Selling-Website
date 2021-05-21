@@ -22,6 +22,8 @@ Form made using HTML5 and jQuery UI Widgets for ALL Elements.
 7. Make all pages Responsive for 3 layouts (Desktops, iPads and Phones).
 8. Website Security using CSP, HTML Encoding, etc.
 
+User can check the search functionality by filling the search form using internal JSON data in HTML Search Page. 
+
 ## Made Using
 
 ### 1. jQuery
