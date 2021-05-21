@@ -1,16 +1,12 @@
-# ZILLOW---Property-Selling-Website
+# Real-Estate Website
 
 ## Functionalities
 
-1. Search 
-
-    • type (house, flat, any),
-    
-    • price (min price, max price)
-    
-    • bedrooms (min bedroom, max bedroom)
-    
-    • date added (after specified date or between two given dates)
+1. Search </br>
+:small_orange_diamond:type (house, flat, any) </br>
+:small_orange_diamond:price (min price, max price)</br>
+:small_orange_diamond:bedrooms (min bedroom, max bedroom)</br>
+:small_orange_diamond:date added (after specified date or between two given dates)</br>
     
 Form made using HTML5 and jQuery UI Widgets for ALL Elements.
 
